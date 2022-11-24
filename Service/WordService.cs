@@ -24,9 +24,9 @@ public class WordService
         return oneWord;
     }
     
-    public string GetRandomWord(int index)
+    public string GetRandomWord()
     {
-        var random = wordRepo.GetRandWord(index);
+        var random = wordRepo.GetRandWord();
 
         return random;
     }

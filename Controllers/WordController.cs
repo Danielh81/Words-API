@@ -29,12 +29,12 @@ public class WordController
     }
 
     [HttpGet("/randomword")]
-    public string GetRandomWord(int index)
+    public string GetRandomWord()
     {
-        string rando = wordService.GetRandomWord(index);
-        
+        string rando = wordService.GetRandomWord();
+
         return rando;
     }
-    
+
 }
 

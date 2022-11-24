@@ -2,12 +2,6 @@ namespace RandomWords.Repository;
 
 public class WordRepository
 {
-    private WordList wordList;
-    public WordRepository(WordList wordList)
-    {
-        this.wordList = wordList;
-    }
-    
     public List<string> GetAllWords()
     {
         return WordList.words;
@@ -21,13 +15,12 @@ public class WordRepository
         return word;
     }
 
-    public string GetRandWord(int index)
+    public string GetRandWord()
     {
-        var randWord = WordList.words;
         Random random = new Random();
-        var randomWord = random.Next(0, 7);
+        var randomWord = random.Next(0, 6);
         var rando = WordList.words[randomWord];
-        
+
         return rando;
     }
 
